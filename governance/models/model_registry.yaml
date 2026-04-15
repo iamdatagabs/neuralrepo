@@ -1,27 +1,42 @@
-# Model Registry - Governance Layer
-# Fonte única da verdade para versões de modelos
-
 models:
-  - model_name: "clinical_model_v1"
+  - model_name: "multimodal_clinical_model_v1"
     version: "1.0.0"
-    status: "staging"   # draft | staging | production | deprecated
+    status: "staging"
 
     description: >
-      Modelo base para inferência clínica em dados estruturados.
+      Modelo multimodal para inferência clínica baseado em imagens médicas,
+      vídeos clínicos e dados de telemetria fisiológica.
 
     created_at: "2026-04-15"
     trained_by: "research_team"
 
+    modalities:
+      image:
+        type: "medical_imaging"
+        sources: ["xray", "ct_scan", "mri"]
+        preprocessing_version: "img_v1.0.0"
+
+      video:
+        type: "clinical_video"
+        sources: ["surgery", "patient_monitoring"]
+        preprocessing_version: "video_v1.0.0"
+
+      telemetry:
+        type: "time_series"
+        sources: ["ecg", "spo2", "heart_rate", "bp"]
+        sampling_rate: "variable"
+        preprocessing_version: "ts_v1.0.0"
+
     dataset:
-      name: "clinical_dataset_v1"
+      name: "multimodal_clinical_dataset_v1"
       version: "1.0.0"
-      source: "hospital_partner_or_public_dataset"
-      preprocessing_version: "1.0.0"
+
+    fusion_strategy: "late_fusion"
 
     metrics:
-      auc: 0.91
-      accuracy: 0.87
-      f1_score: 0.86
+      auc: 0.93
+      accuracy: 0.89
+      temporal_consistency_score: 0.87
 
     clinical_safety:
       validated: false
@@ -29,8 +44,10 @@ models:
       approved_for_clinical_use: false
 
     artifacts:
-      model_path: "checkpoints/clinical_model_v1.pt"
-      preprocessing_pipeline: "artifacts/preprocess_v1.pkl"
+      image_encoder: "checkpoints/img_encoder.pt"
+      video_encoder: "checkpoints/video_encoder.pt"
+      telemetry_encoder: "checkpoints/ts_encoder.pt"
+      fusion_model: "checkpoints/fusion.pt"
 
     notes: >
-      Modelo em fase de validação. Não utilizar em produção clínica.
+      Modelo multimodal experimental. Requer validação clínica por modalidade.
