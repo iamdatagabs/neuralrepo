@@ -2,7 +2,7 @@
 ### Experimentos em Redes Neurais • TinyML • Domain Adaptation
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Pontif%C3%ADcia_Universidade_Cat%C3%B3lica_do_Paran%C3%A1_logo.png" width="200"/>
+  <img src="assets/logo-pucpr-vermelha.png" width="200"/>
 </p>
 
 <p align="center">
