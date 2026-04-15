@@ -1,0 +1,8 @@
+name: icu_sepsis_cohort
+
+inclusion:
+  modality: ["ICU"]
+  age_min: 18
+
+exclusion:
+  missing_key_vitals: true
