@@ -59,12 +59,72 @@ https://www.kaggle.com/datasets/aminumusa/nigeria-chest-x-ray-dataset
 
 ```bash
 repo/
-├── data/           # Instruções do dataset
-├── src/            # Código principal (modelos, treino, utils)
-├── notebooks/      # Exploração e análise
-├── results/        # Resultados dos experimentos
-├── scripts/        # Scripts auxiliares
-└── README.md
+│
+├── data/                         # Dados clínicos (imagens, vídeos, metadados)
+│   ├── raw/                      # Dados brutos (DICOM, vídeos originais)
+│   ├── processed/                # Dados pré-processados
+│   └── external/                 # Bases de dados (ex: MIMIC, datasets acadêmicos e/ou dados obtidos via parceiros)
+│
+├── cohorts/                     # Definição computacional das populações de estudo
+│   ├── imaging/                 # Cohorts para exames de imagem
+│   │   ├── chest_xray.yaml
+│   │   └── brain_mri.yaml
+│   │
+│   └── video/                   # Cohorts para vídeos cirúrgicos/endoscopia
+│       ├── laparoscopy.yaml
+│       └── endoscopy.yaml
+│
+├── src/                        # Núcleo de IA reutilizável
+│   ├── data/                   # loaders (DICOM, vídeo, etc.)
+│   ├── preprocessing/          # normalização, frames, slices
+│   ├── features/               # features clínicas e visuais
+│   ├── models/                 # arquiteturas de IA
+│   ├── training/               # loops de treino
+│   ├── evaluation/             # métricas (AUC, Dice, etc.)
+│   └── inference/              # uso do modelo (pipeline clínico)
+│
+├── studies/                    # Estudos científicos (padrão NIH / paper-oriented)
+│   ├── study_001_example/
+│   │   ├── cohort.yaml         # qual população foi usada
+│   │   ├── config.yaml         # hiperparâmetros do estudo
+│   │   ├── run.py              # execução do estudo
+│   │   ├── metrics.json        # resultados quantitativos
+│   │   ├── outputs.csv         # predições
+│   │   └── interpretation.md   # análise clínica dos resultados
+│   │
+│   └── study_002_example/
+│
+├── registry/                   # Rastreamento e reprodutibilidade
+│   ├── models/                 # versões de modelos treinados
+│   ├── datasets/               # versões de cohorts/datasets
+│   └── runs/                   # logs de execuções de estudos
+│
+├── results/                   # Resultados consolidados
+│   ├── figures/               # gráficos e visualizações
+│   ├── tables/                # tabelas estatísticas
+│   └── reports/               # relatórios científicos
+│
+├── notebooks/                  # Exploração e análise (não produtivo)
+│
+├── scripts/                    # Automação de pipelines
+│   ├── train.py
+│   ├── evaluate.py
+│   └── build_cohort.py
+│
+├── configs/                    # Configurações globais (YAML)
+│   ├── config.yaml
+│   ├── model.yaml
+│   └── train.yaml
+│
+├── tests/                     # Testes de integridade do pipeline
+│
+├── .github/
+│   └── workflows/              # CI (validação e reprodutibilidade)
+│       └── ci.yml
+│
+├── requirements.txt
+├── README.md
+└── LICENSE
 ```
 
 ---
