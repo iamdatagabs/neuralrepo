@@ -57,8 +57,6 @@ https://www.kaggle.com/datasets/aminumusa/nigeria-chest-x-ray-dataset
 
 ## 🗂️ Estrutura do Projeto
 
-## 🗂️ Estrutura do Projeto
-
 ```bash
 repo/
 ├── data/           # Instruções do dataset
