@@ -1,0 +1,11 @@
+training:
+  epochs: 20
+  learning_rate: 0.001
+  optimizer: "adam"
+  loss_function: "cross_entropy"
+
+  early_stopping: true
+  patience: 5
+
+logging:
+  log_interval: 10
