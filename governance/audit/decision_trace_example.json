@@ -1,0 +1,36 @@
+
+---
+
+# 📄 2. `decision_trace_example.json`
+
+```json id="au3"
+{
+  "trace_id": "trace_001",
+
+  "pipeline": {
+    "image_encoder": {
+      "output_embedding_norm": 0.81
+    },
+    "telemetry_encoder": {
+      "temporal_window": "30min",
+      "signal_quality_score": 0.88
+    },
+    "fusion_module": {
+      "strategy": "late_fusion",
+      "weights": {
+        "image": 0.6,
+        "telemetry": 0.4
+      }
+    }
+  },
+
+  "final_decision": {
+    "class": "risk_high",
+    "probability": 0.92
+  },
+
+  "explanation": {
+    "image_contribution": "lesion_pattern_detected",
+    "telemetry_contribution": "tachycardia_pattern_detected"
+  }
+}
