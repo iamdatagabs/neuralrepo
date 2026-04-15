@@ -51,6 +51,16 @@ https://www.kaggle.com/datasets/aminumusa/nigeria-chest-x-ray-dataset
 
 > ⚠️ O dataset não está incluído no repositório (licença + tamanho)
 
+👉 **Enhanced MRI Brain Tumor Classification**  
+https://www.kaggle.com/code/farzadnekouei/enhanced-mri-brain-tumor-classification  
+
+> ⚠️ O dataset não está incluído no repositório (licença + tamanho)
+
+👉 **Lung Cancer Prediction on Image Data**  
+https://www.kaggle.com/code/adityamahimkar/lung-cancer-prediction-on-image-data/notebook  
+
+> ⚠️ O dataset não está incluído no repositório (licença + tamanho)
+
 📌 Veja como baixar em: `data/README.md`
 
 ---
