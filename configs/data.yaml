@@ -1,0 +1,10 @@
+data:
+  dataset_name: "custom_dataset"
+  batch_size: 32
+  num_workers: 2
+
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+
+  shuffle: true
