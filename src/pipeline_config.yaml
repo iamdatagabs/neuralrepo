@@ -1,0 +1,27 @@
+pipeline_name: "multimodal_clinical_pipeline"
+version: "1.0.0"
+
+modalities:
+  image:
+    enabled: true
+    preprocessing: "img_v1.0.0"
+    input_format: "dicom"
+
+  video:
+    enabled: true
+    preprocessing: "video_v1.0.0"
+    fps_standard: 15
+
+  telemetry:
+    enabled: true
+    preprocessing: "ts_v1.0.0"
+    resampling: "1Hz"
+
+fusion:
+  strategy: "late_fusion"
+  alignment: "temporal_window_sync"
+  window_size_seconds: 60
+
+output:
+  format: "structured_tensor_bundle"
+  include_uncertainty: true
