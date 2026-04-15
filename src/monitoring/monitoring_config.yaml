@@ -1,0 +1,33 @@
+monitoring_system:
+  version: "1.0.0"
+
+models:
+  tracked_models:
+    - multimodal_clinical_model_v1
+
+drift_detection:
+  image:
+    method: "kl_divergence"
+    threshold: 0.15
+
+  video:
+    method: "feature_distribution_shift"
+    threshold: 0.20
+
+  telemetry:
+    method: "psi"
+    threshold: 0.10
+
+performance:
+  metrics:
+    - auc
+    - accuracy
+    - f1_score
+    - sensitivity
+    - specificity
+
+  evaluation_window: "7d"
+
+alerts:
+  mode: "real_time"
+  severity_levels: ["info", "warning", "critical"]
