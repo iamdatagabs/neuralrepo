@@ -1,0 +1,36 @@
+# Model Registry - Governance Layer
+# Fonte única da verdade para versões de modelos
+
+models:
+  - model_name: "clinical_model_v1"
+    version: "1.0.0"
+    status: "staging"   # draft | staging | production | deprecated
+
+    description: >
+      Modelo base para inferência clínica em dados estruturados.
+
+    created_at: "2026-04-15"
+    trained_by: "research_team"
+
+    dataset:
+      name: "clinical_dataset_v1"
+      version: "1.0.0"
+      source: "hospital_partner_or_public_dataset"
+      preprocessing_version: "1.0.0"
+
+    metrics:
+      auc: 0.91
+      accuracy: 0.87
+      f1_score: 0.86
+
+    clinical_safety:
+      validated: false
+      bias_assessment_done: false
+      approved_for_clinical_use: false
+
+    artifacts:
+      model_path: "checkpoints/clinical_model_v1.pt"
+      preprocessing_pipeline: "artifacts/preprocess_v1.pkl"
+
+    notes: >
+      Modelo em fase de validação. Não utilizar em produção clínica.
