@@ -1,0 +1,11 @@
+project:
+  name: "ml-project"
+  seed: 42
+
+paths:
+  data_dir: "/content/data"
+  output_dir: "/content/outputs"
+  model_dir: "/content/checkpoints"
+
+device:
+  use_gpu: true
