@@ -1,0 +1,44 @@
+{
+  "dataset_name": "multimodal_clinical_dataset_v1",
+  "version": "1.0.0",
+  "created_at": "2026-04-15",
+
+  "modalities": {
+    "image": {
+      "sources": [
+        {
+          "type": "hospital_xray_system",
+          "origin": "partner_hospital_A",
+          "country": "BR",
+          "anonymization": "dicom_header_stripped"
+        }
+      ]
+    },
+
+    "video": {
+      "sources": [
+        {
+          "type": "surgical_room_recordings",
+          "origin": "partner_hospital_B",
+          "anonymization": "face_blurring + patient_region_masking"
+        }
+      ]
+    },
+
+    "telemetry": {
+      "sources": [
+        {
+          "type": "ICU_monitoring_system",
+          "origin": "partner_hospital_C",
+          "sampling_rate": "variable",
+          "anonymization": "time_shifted_ids"
+        }
+      ]
+    }
+  },
+
+  "consent": {
+    "type": "retrospective + approved research consent",
+    "lgpd_compliant": true
+  }
+}
