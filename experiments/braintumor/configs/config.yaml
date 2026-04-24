@@ -1,0 +1,22 @@
+id: "c9m2qe"
+seed: 42
+
+data:
+  img_size: 224
+  batch_size: 32
+  test_size: 0.3
+  val_size: 0.2
+
+model:
+  name: "efficientnet"  # options: baseline, efficientnet
+  learning_rate: 0.001
+  fine_tune: true
+  unfreeze_layers: 30
+
+training:
+  epochs: 30
+  fine_tune_epochs: 20
+
+paths:
+  data_dir: "data/"
+  models_dir: "models/"
