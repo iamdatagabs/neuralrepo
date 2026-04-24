@@ -1,0 +1,3 @@
+Modelo,Acurácia,Precisão,Recall,F1-Score,ROC-AUC
+CNN Baseline,0.6154,0.5833,0.8077,0.6774,0.6243
+EfficientNetB3 (TL),0.8846,0.8571,0.9231,0.8889,0.9556
