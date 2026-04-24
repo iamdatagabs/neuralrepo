@@ -1,0 +1,26 @@
+# Dados brutos (baixar via Kaggle API)
+data/raw/
+data/brain_tumor_dataset/
+*.zip
+
+# Modelos treinados (grandes demais para Git)
+models/*.h5
+models/*.keras
+models/*.pb
+
+# Logs do TensorBoard
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Ambiente virtual
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
