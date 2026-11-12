@@ -230,8 +230,8 @@ Este projeto está sob a licença MIT.
 - Comunidade Kaggle  
 - Associação Codaqui, DevParaná e Comunidade Campos Tech  
 
-❤️ Ju Miranda (best gf ever, I'm waitin' for 2028)  
-❤️ Maria D'Ajuda e Rafael (thx 4 being my family)  
+❤️ Dany (best gf ever, I'm waitin' for 2028)  
+❤️ Maria D'Ajuda, Rubens e Rafael (thx 4 being my family)
 
 ---
 
