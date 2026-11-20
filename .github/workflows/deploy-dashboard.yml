@@ -50,6 +50,11 @@ jobs:
       - name: Build dashboard
         working-directory: dashboard
         run: npm run build
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
