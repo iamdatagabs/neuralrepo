@@ -55,6 +55,27 @@ function Overview({data,mean,metric,onNavigate}:{data:DashboardData;mean:number;
   const best=[...data.experiments].sort((a,b)=>(b.metrics.roc_auc??0)-(a.metrics.roc_auc??0))[0];
   return <div className="stack">
     <section className="hero"><div className="hero-orbit"><div/><div/><BrainCircuit size={42}/></div><div className="hero-copy"><div className="hero-label"><i/> RESEARCH ENVIRONMENT <b>01 / OBSERVED DATA</b></div><h2>From experiments<br/>to <span>evidence.</span></h2><p>A research workspace for deep learning, medical imaging, domain adaptation and efficient AI.</p><button onClick={()=>onNavigate("benchmarks")}>Explore model benchmark <ArrowUpRight size={16}/></button></div><div className="hero-index">NR / LAB <b>2026</b></div></section>
+    <section className="visual-showcase">
+      <div className="visual-showcase-head">
+        <div><div className="eyebrow"><span/> SELECTED RESEARCH OUTPUTS</div><h2>See the research in action.</h2><p>Real assets published from the Brain Tumor MRI experiment.</p></div>
+        <button className="showcase-link" onClick={()=>onNavigate("imaging")}>Open Imaging Lab <ArrowUpRight size={15}/></button>
+      </div>
+      <div className="showcase-grid">
+        <button className="showcase-card showcase-featured" onClick={()=>onNavigate("imaging")}>
+          <div className="showcase-image"><img src="https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/eda_samples.png" alt="Brain MRI dataset examples showing NORMAL and TUMOR classes" loading="lazy"/><span className="showcase-chip">IMAGING LAB</span></div>
+          <div className="showcase-copy"><small>01 / MEDICAL IMAGING</small><b>Brain MRI · Dataset exploration</b><p>Examples from the public Brain MRI dataset, with source and provenance documented.</p></div>
+        </button>
+        <button className="showcase-card" onClick={()=>onNavigate("explainability")}>
+          <div className="showcase-image"><img src="https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/gradcam_visualization.png" alt="Grad-CAM heatmap visualizations for brain MRI examples" loading="lazy"/><span className="showcase-chip">EXPLAINABILITY</span></div>
+          <div className="showcase-copy"><small>02 / MODEL INTERPRETABILITY</small><b>Grad-CAM · Activation maps</b><p>Exploratory heatmaps and overlays associated with model outputs.</p></div>
+        </button>
+        <button className="showcase-card" onClick={()=>onNavigate("imaging")}>
+          <div className="showcase-image"><img src="https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/augmentation_preview.png" alt="Brain MRI images before and after data augmentation" loading="lazy"/><span className="showcase-chip">DATA PIPELINE</span></div>
+          <div className="showcase-copy"><small>03 / DATA AUGMENTATION</small><b>Image transformations</b><p>Examples of methodological transformations applied during experimentation.</p></div>
+        </button>
+      </div>
+      <div className="showcase-foot"><ShieldCheck size={15}/><span>Research and educational material. Visualizations are not diagnostic tools or evidence of clinical validity.</span></div>
+    </section>
     <div className="section-head"><div><small>AT A GLANCE</small><h2>Research indicators</h2></div><span>SOURCE: VERSIONED REPOSITORY ARTIFACTS</span></div>
     <div className="stats">
       <Stat icon={<FlaskConical/>} label="Benchmark records" value={String(data.total_experiments)} foot="Rows from recorded CSV benchmark"/>
