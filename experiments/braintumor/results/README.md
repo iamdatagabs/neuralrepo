@@ -36,8 +36,10 @@ Não interpretar os resultados como diagnóstico ou recomendação médica.
 
 ## 📜 Direitos e licenciamento
 
-As figuras podem conter imagens originais ou transformadas do dataset Brain MRI. A licença MIT do código deste repositório **não** cobre essas imagens nem concede autorização para redistribuí-las.
+A redistribuição pública dos ativos visuais selecionados para o dashboard (`eda_samples.png`, `gradcam_visualization.png` e `augmentation_preview.png`) foi confirmada pelo responsável do projeto em 20 de novembro de 2026, incluindo publicação no GitHub Pages. O registro do escopo está em [../DATASET_LICENSE.md](../DATASET_LICENSE.md).
 
-A página do dataset no Kaggle informa “Data files © Original Authors”, sem apresentar, na página consultada, uma licença aberta explícita para redistribuição. Por precaução, estes arquivos não devem ser promovidos para uma galeria pública ou reutilizados fora do contexto permitido pelo titular até que os direitos de uso e redistribuição sejam confirmados.
+Essa autorização específica não transforma o dataset em MIT nem se estende automaticamente a outros arquivos, datasets ou usos. A licença MIT do repositório cobre o código e a documentação autoral, não os materiais de terceiros.
 
-Consulte [../DATASET_LICENSE.md](../DATASET_LICENSE.md).
+## Dashboard
+
+Os ativos aprovados para a galeria são listados em `dashboard/public/data/visuals.json`. A galeria mantém avisos de pesquisa/educação e contexto de proveniência. Grad-CAM não deve ser interpretado como validação clínica.
