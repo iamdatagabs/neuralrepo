@@ -170,3 +170,26 @@ footer{margin-top:34px;padding-top:20px}
 .mri-method b{color:var(--text)}.mri-method a{margin-left:auto;color:var(--accent);text-decoration:none}
 @media(max-width:850px){.mri-layout{grid-template-columns:1fr}.mri-side{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.mri-heading{align-items:start;flex-direction:column}.mri-side{grid-template-columns:1fr}.mri-viewer{padding:11px}.mri-method a{margin-left:0}}
+
+/* Paired NORMAL × TUMOR MRI comparison */
+.mri-compare-layout{grid-template-columns:minmax(0,1.15fr) minmax(340px,1fr)}
+.mri-class-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.mri-class-switch button{display:flex;justify-content:space-between;align-items:center;padding:9px 11px;border:1px solid var(--line);border-radius:7px;background:var(--surface2);color:var(--muted);font:600 10px "DM Mono";letter-spacing:.7px;cursor:pointer}
+.mri-class-switch button small{font:10px "DM Sans";letter-spacing:0;opacity:.7}
+.mri-class-switch button.active.normal{border-color:#4b9b88;background:#4b9b8818;color:#287b68}
+.mri-class-switch button.active.tumor{border-color:#b97883;background:#b9788318;color:#b05d6b}
+.mri-compare-table{display:grid;margin-top:13px}
+.mri-compare-head,.mri-compare-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(65px,.8fr) minmax(65px,.8fr);gap:8px;align-items:center}
+.mri-compare-head{padding:0 0 9px;border-bottom:1px solid var(--line);font:9px "DM Mono";color:var(--muted)}
+.mri-compare-head b{text-align:right;font-size:9px}
+.normal-text{color:#39947f}.tumor-text{color:#c07882}
+.mri-compare-row{padding:13px 0;border-bottom:1px solid var(--line)}
+.mri-compare-row:last-child{border-bottom:0}
+.mri-compare-row span{font-size:10px;color:var(--muted)}
+.mri-compare-row b{text-align:right;font:600 13px "Space Grotesk";color:var(--text);font-variant-numeric:tabular-nums}
+.mri-deltas{display:grid;gap:9px;margin-top:12px;padding:12px;border-radius:8px;background:var(--surface2)}
+.mri-deltas>small{font:9px "DM Mono";letter-spacing:.45px;color:var(--muted);margin-bottom:2px}
+.mri-deltas>div{display:flex;justify-content:space-between;gap:12px;font-size:10px;color:var(--muted)}
+.mri-deltas b{font:600 11px "DM Mono";color:var(--text);font-variant-numeric:tabular-nums}
+@media(max-width:1000px){.mri-compare-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.mri-compare-head,.mri-compare-row{grid-template-columns:minmax(0,1fr) minmax(58px,.75fr) minmax(58px,.75fr);gap:5px}.mri-compare-row b{font-size:11px}}
