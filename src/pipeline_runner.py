@@ -1,3 +1,10 @@
+from src.alignment import TemporalAlignment
+from src.feature_extraction import FeatureExtractor
+from src.fusion import FusionModule
+from src.ingestion import DataIngestion
+from src.preprocessing import PreprocessingPipeline
+
+
 class PipelineRunner:
     """
     Orquestra todo o fluxo:
