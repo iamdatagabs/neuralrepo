@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Export aggregate, non-patient-level NeuralRepo experiment results for GitHub Pages."""
 from __future__ import annotations
-import csv, json, re
+import csv, json, re, unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
