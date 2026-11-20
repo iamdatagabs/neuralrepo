@@ -1,72 +1,43 @@
 ## 📊 Resultados
 
-Os resultados completos do experimento estão disponíveis na pasta `results/`.  
-Essa organização mantém o repositório limpo e facilita a navegação entre análises exploratórias, treinamento e avaliação dos modelos.
+Os artefatos de análise exploratória, avaliação e interpretabilidade estão nesta pasta.
 
 ### Principais arquivos
 
 #### 🔍 Análise Exploratória (EDA)
 
-- `eda_distribution.png`  
-  Distribuição das classes e análise das dimensões das imagens.
-
-- `eda_samples.png`  
-  Amostras visuais das classes (normal vs tumor), permitindo inspeção qualitativa inicial.
-
-- `eda_pixel_distribution.png`  
-  Distribuição de intensidade de pixels por classe, útil para entender diferenças estatísticas entre os grupos.
-
----
+- `eda_distribution.png` — distribuição das classes e dimensões das imagens.
+- `eda_samples.png` — amostras visuais das classes.
+- `eda_pixel_distribution.png` — distribuição de intensidade de pixels por classe.
 
 #### 🔄 Pré-processamento
 
-- `augmentation_preview.png`  
-  Exemplos de técnicas de *data augmentation* aplicadas durante o treinamento (flip, rotação, brilho, contraste).
-
----
+- `augmentation_preview.png` — exemplos de técnicas de aumento de dados (flip, rotação, brilho e contraste).
 
 #### 📈 Avaliação dos Modelos
 
-- `evaluation_comparison.png`  
-  Painel completo com:
-  - Curvas de aprendizado  
-  - Matrizes de confusão  
-  - Curvas ROC  
-  - Comparação de métricas  
-
-- `model_comparison.csv`  
-  Tabela com métricas quantitativas dos modelos (acurácia, precisão, recall, F1-score e ROC-AUC).
-
----
+- `evaluation_comparison.png` — curvas de aprendizado, matrizes de confusão, curvas ROC e comparação de métricas.
+- `model_comparison.csv` — métricas quantitativas reportadas pelo experimento.
 
 #### 🧠 Interpretabilidade
 
-- `gradcam_visualization.png`  
-  Visualizações de Grad-CAM destacando as regiões da imagem mais relevantes para a decisão do modelo.
+- `gradcam_visualization.png` — visualizações Grad-CAM.
 
 ---
 
-### 🧠 Interpretação Geral
+## ⚠️ Limitações e cautela científica
 
-O modelo baseado em **transfer learning (EfficientNetB3)** apresentou desempenho superior ao baseline, principalmente em:
+- O conjunto de dados é limitado e não representa a variabilidade clínica real.
+- Não há validação externa documentada.
+- Resultados experimentais não demonstram segurança, eficácia ou utilidade clínica.
+- Grad-CAM é uma técnica de visualização; não comprova, isoladamente, que o modelo utiliza evidências clinicamente válidas.
 
-- **Recall (sensibilidade)** → reduz falsos negativos, essencial em contexto clínico  
-- **ROC-AUC** → indica boa capacidade de separação entre classes  
+Não interpretar os resultados como diagnóstico ou recomendação médica.
 
-As visualizações com Grad-CAM sugerem que o modelo aprende padrões espacialmente relevantes, com foco em regiões compatíveis com alterações estruturais.
+## 📜 Direitos e licenciamento
 
----
+As figuras podem conter imagens originais ou transformadas do dataset Brain MRI. A licença MIT do código deste repositório **não** cobre essas imagens nem concede autorização para redistribuí-las.
 
-### ⚠️ Observação
+A página do dataset no Kaggle informa “Data files © Original Authors”, sem apresentar, na página consultada, uma licença aberta explícita para redistribuição. Por precaução, estes arquivos não devem ser promovidos para uma galeria pública ou reutilizados fora do contexto permitido pelo titular até que os direitos de uso e redistribuição sejam confirmados.
 
-Os resultados devem ser interpretados com cautela:
-
-- Dataset limitado e não representativo da variabilidade clínica real  
-- Ausência de validação externa  
-- Uso restrito a fins educacionais e de pesquisa  
-
----
-
-### 🔍 Visualização
-
-![Grad-CAM](results/gradcam_visualization.png)
+Consulte [../DATASET_LICENSE.md](../DATASET_LICENSE.md).
