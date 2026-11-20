@@ -1,3 +1,9 @@
+from src.monitoring.alerting_system import AlertingSystem
+from src.monitoring.data_quality_monitor import DataQualityMonitor
+from src.monitoring.drift_detector import DriftDetector
+from src.monitoring.performance_monitor import PerformanceMonitor
+
+
 class MonitoringPipeline:
     """
     Orquestra todo o monitoramento do sistema.
