@@ -28,7 +28,8 @@ class PipelineRunner:
 
         image_p = self.preprocessing.process_image(image)
         video_p = self.preprocessing.process_video(aligned["video_segments"])
-        ts_p = self.preprocessing.process_telemetry(aligned["telemetry_window"])
+        telemetry_window = aligned["telemetry_window"]
+        ts_p = self.preprocessing.process_telemetry(telemetry_window)
 
         image_emb = self.features.image_features(image_p)
         video_emb = self.features.video_features(video_p)
