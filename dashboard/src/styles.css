@@ -73,3 +73,73 @@
 .shell.light .showcase-card:hover{box-shadow:0 10px 28px #18304712}
 @media(max-width:1000px){.showcase-grid{grid-template-columns:1fr 1fr}.showcase-featured{grid-column:span 2}.showcase-featured .showcase-image{aspect-ratio:2.2}}
 @media(max-width:600px){.visual-showcase-head{align-items:start;flex-direction:column}.showcase-grid{grid-template-columns:1fr}.showcase-featured{grid-column:auto}.showcase-featured .showcase-image{aspect-ratio:1.48}.showcase-image{min-height:170px}}
+
+
+/* NeuralRepo homepage redesign — editorial clinical research direction */
+.content{max-width:1500px;padding:34px 46px 30px}
+.heading{margin-bottom:30px}
+.heading h1{font-size:36px;letter-spacing:-1.2px}
+.heading p{font-size:14px}
+.stack{gap:25px}
+.hero{min-height:390px;padding:48px 52px;border:0;border-radius:18px;background:#102b3b;isolation:isolate;box-shadow:0 22px 55px #102b3b22}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#0d2534 0%,#0d2534f2 35%,#0d25349c 62%,#0d25344a 100%),url("https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/gradcam_visualization.png") center right/cover no-repeat;opacity:1}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 78% 50%,#3db7ae2b,transparent 32%),linear-gradient(0deg,#061a2670,transparent 45%)}
+.shell.light .hero{background:#102b3b;border:0}
+.shell.light .hero:before{background:linear-gradient(90deg,#102b3b 0%,#102b3bf2 35%,#102b3b9c 62%,#102b3b4a 100%),url("https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/gradcam_visualization.png") center right/cover no-repeat}
+.hero-copy{max-width:610px}
+.hero-label{color:#9fd1d2;font-size:10px;letter-spacing:1.7px}
+.hero-label b{color:#8ca9b7}
+.hero h2{font-size:clamp(42px,5vw,66px);line-height:1.02;letter-spacing:-2.5px;margin:25px 0 15px;color:#f4fbff}
+.hero h2 span{color:#72d6c8}
+.hero p,.shell.light .hero p{max-width:460px;color:#c0d4dd;font-size:14px;line-height:1.7}
+.hero button{background:#72d6c8;color:#0c2936;border-radius:7px;padding:13px 17px;font-size:12px}
+.hero button:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.hero-orbit{right:8%;width:270px;height:270px;color:#8ee0d4;opacity:.78}
+.hero-orbit div{border-color:#9de4dc66}
+.hero-orbit div:nth-child(2){inset:30px}
+.hero-orbit svg{width:58px;height:58px}
+.hero-index{right:28px;bottom:24px;color:#a6c1ca}
+.hero-index b{color:#8ee0d4}
+.visual-showcase{gap:19px;margin:4px 0 8px}
+.visual-showcase-head h2{font-size:28px;letter-spacing:-.9px}
+.visual-showcase-head p{font-size:13px}
+.showcase-grid{grid-template-columns:1.25fr 1fr 1fr;gap:16px}
+.showcase-card{border-radius:14px;box-shadow:0 8px 24px #15384a0a}
+.showcase-image{aspect-ratio:1.42;min-height:220px;background:#e5edf0}
+.showcase-image img{max-height:290px;object-fit:cover}
+.showcase-featured .showcase-image img{object-fit:cover}
+.showcase-copy{padding:17px 18px 19px}
+.showcase-copy small{font-size:10px;letter-spacing:1.1px}
+.showcase-copy b{font-size:16px}
+.showcase-copy p{font-size:12px;line-height:1.65}
+.showcase-chip{font-size:9px;padding:7px 10px;letter-spacing:1px}
+.showcase-foot{padding:13px 15px;font-size:11px}
+.section-head{padding-top:7px}
+.section-head h2{font-size:23px}
+.stats{gap:16px}
+.stat{padding:20px;border-radius:13px;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.stat:hover{transform:translateY(-3px);border-color:var(--accent)}
+.stat-icon{margin-bottom:20px}
+.stat strong{font-size:30px;letter-spacing:-.8px}
+.stat small{font-size:11px}
+.stat em{font-size:10px;line-height:1.5}
+.panel{border-radius:13px;padding:23px}
+.panel-head h3{font-size:18px}
+.grid-two{gap:17px}
+.track{padding:14px 4px}
+.track>span{width:40px;height:40px}
+.track b{font-size:13px}
+.track small{font-size:11px}
+.track-cards{gap:17px}
+.track-card{border-radius:13px;padding:24px}
+footer{margin-top:34px;padding-top:20px}
+.shell.light .hero h2 span{color:#72d6c8}
+.shell.light .hero-label{color:#9fd1d2}
+.shell.light .hero-label b{color:#8ca9b7}
+.shell.light .hero-orbit{color:#8ee0d4}
+.shell.light .hero-orbit div{border-color:#9de4dc66}
+.shell.light .hero-index{color:#a6c1ca}
+.shell.light .hero-index b{color:#8ee0d4}
+@media(max-width:1100px){.content{padding:28px 25px}.hero{min-height:350px;padding:38px}.hero-orbit{right:3%;opacity:.45}.showcase-grid{grid-template-columns:1fr 1fr}.showcase-featured{grid-column:span 2}.showcase-featured .showcase-image{aspect-ratio:2.2}}
+@media(max-width:760px){.content{padding:24px 15px}.heading h1{font-size:28px}.hero{min-height:340px;padding:28px 24px;align-items:flex-start}.hero:before{background:linear-gradient(90deg,#0d2534f5 0%,#0d2534d9 60%,#0d253488 100%),url("https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/gradcam_visualization.png") center/cover no-repeat}.hero h2{font-size:42px;margin-top:24px}.hero p,.shell.light .hero p{font-size:12px;max-width:340px}.hero-orbit{right:-70px;top:95px;width:210px;height:210px;opacity:.24}.hero-index{right:18px;bottom:15px}.stats{gap:10px}.stat{padding:15px}.stat strong{font-size:24px}.showcase-grid{grid-template-columns:1fr}.showcase-featured{grid-column:auto}.showcase-featured .showcase-image{aspect-ratio:1.42}.showcase-image{min-height:190px}.visual-showcase-head h2{font-size:24px}.panel{padding:16px}}
+@media(prefers-reduced-motion:reduce){.hero-orbit div{animation:none}.stat,.showcase-card{transition:none}}
