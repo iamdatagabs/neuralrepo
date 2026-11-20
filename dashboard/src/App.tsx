@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Activity, ArrowUpRight, BarChart3, BrainCircuit, CheckCircle2, CircleAlert, Database, FileText, FlaskConical, Github, Image as ImageIcon, LayoutDashboard, Moon, RefreshCw, ScanEye, Search, ShieldCheck, Sun, Waves, Zap } from "lucide-react";
 import VisualExplorer from "./features/imaging/VisualExplorer";
+import MRIExplorer from "./features/imaging/MRIExplorer";
 import type { DashboardData, Experiment } from "./types";
 
 const NAV = [
@@ -40,7 +41,7 @@ function App() {
         <div className="heading"><div><div className="eyebrow"><span/> EXPERIMENTAL AI · MEDICAL IMAGING</div><h1>{page==="overview"?"Research overview":title}</h1><p>From model experiments to reproducible evidence.</p></div><a className="outline" href="https://github.com/iamdatagabs/neuralrepo" target="_blank" rel="noreferrer"><Github size={15}/> View source <ArrowUpRight size={14}/></a></div>
         {loading&&<div className="loading"><span/> Syncing repository artifacts…</div>}
         {page==="overview"&&<Overview data={data} mean={mean} metric={metric} onNavigate={setPage}/>}
-        {page==="imaging"&&<VisualExplorer mode="imaging"/>}
+        {page==="imaging"&&<><VisualExplorer mode="imaging"/><MRIExplorer/></>}
         {page==="explainability"&&<VisualExplorer mode="explainability"/>}
         {page==="benchmarks"&&<Benchmarks experiments={experiments} metric={metric} setMetric={setMetric} query={query} setQuery={setQuery}/>}
         {page==="tracks"&&<Tracks experiments={data.experiments}/>}
