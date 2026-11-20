@@ -1,4 +1,4 @@
-# 🧠 neuralrepo  
+# 🧠 neuralrepo
 ### Experimentos em Redes Neurais • TinyML • Domain Adaptation
 
 <p align="center">
@@ -7,8 +7,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python"/>
-  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-red?logo=pytorch"/>
-  <img src="https://img.shields.io/badge/License-MIT-green"/>
+  <img src="https://img.shields.io/badge/Code%20License-MIT-green"/>
   <img src="https://img.shields.io/badge/Status-Research-orange"/>
   <img src="https://img.shields.io/badge/TinyML-Efficient%20AI-blueviolet"/>
   <img src="https://img.shields.io/badge/Domain%20Adaptation-Generalization-blueviolet"/>
@@ -16,122 +15,60 @@
 </p>
 
 <p align="center">
-  🚀 Repositório de pesquisa em Deep Learning aplicado a imagens médicas  
+  🚀 Repositório de pesquisa em Deep Learning aplicado a imagens médicas
 </p>
 
 ---
 
 ## ✨ Sobre o Projeto
 
-Este repositório faz parte de um projeto de **Doutorado em Ciência da Computação (PPGIA/PUCPR)**, com foco em:
+Este repositório reúne experimentos em aprendizado profundo, com foco em:
 
-- 🧠 Classificação de imagens médicas (contexto geral/cirurgia)  
-- ⚡ **TinyML** (modelos eficientes e leves)  
-- 🌍 **Domain Adaptation** (generalização entre domínios)  
+- Classificação e análise de imagens médicas
+- **TinyML** (modelos eficientes e leves)
+- **Domain Adaptation** (generalização entre domínios)
 
-A ideia é construir um **framework experimental reprodutível**, permitindo comparar diferentes arquiteturas e estratégias de forma justa e organizada.
+O objetivo é construir um framework experimental reprodutível para comparar arquiteturas e estratégias de forma organizada.
 
 ---
 
 ## 🎯 Objetivos
 
-- Comparar arquiteturas de redes neurais  
-- Investigar técnicas de compressão (quantização e pruning)  
-- Avaliar métodos de Domain Adaptation (DANN, CORAL, MMD)  
-- Garantir **reprodutibilidade científica**  
+- Comparar arquiteturas de redes neurais
+- Investigar técnicas de compressão (quantização e pruning)
+- Avaliar métodos de Domain Adaptation (DANN, CORAL, MMD)
+- Promover reprodutibilidade científica
 
 ---
 
-## 🧪 Dataset
+## 🧪 Datasets
 
-Utilizamos o dataset:
+Os datasets externos são obtidos diretamente de suas fontes. Eles não são automaticamente cobertos pela licença MIT deste repositório.
 
-👉 **Nigeria Chest X-Ray Dataset**  
-https://www.kaggle.com/datasets/aminumusa/nigeria-chest-x-ray-dataset  
+- **Nigeria Chest X-Ray Dataset** — [Kaggle](https://www.kaggle.com/datasets/aminumusa/nigeria-chest-x-ray-dataset)
+- **Enhanced MRI Brain Tumor Classification** — [Kaggle](https://www.kaggle.com/code/farzadnekouei/enhanced-mri-brain-tumor-classification)
+- **Lung Cancer Prediction on Image Data** — [Kaggle](https://www.kaggle.com/code/adityamahimkar/lung-cancer-prediction-on-image-data/notebook)
+- **Brain MRI Images for Brain Tumor Detection** — [Kaggle](https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection)
 
-> ⚠️ O dataset não está incluído no repositório (licença + tamanho)
-
-👉 **Enhanced MRI Brain Tumor Classification**  
-https://www.kaggle.com/code/farzadnekouei/enhanced-mri-brain-tumor-classification  
-
-> ⚠️ O dataset não está incluído no repositório (licença + tamanho)
-
-👉 **Lung Cancer Prediction on Image Data**  
-https://www.kaggle.com/code/adityamahimkar/lung-cancer-prediction-on-image-data/notebook  
-
-> ⚠️ O dataset não está incluído no repositório (licença + tamanho)
-
-📌 Veja como baixar em: `data/README.md`
+Consulte os termos de cada fonte antes de baixar, usar, modificar ou redistribuir dados. Para o dataset Brain MRI, a situação de licenciamento está documentada em [experiments/braintumor/DATASET_LICENSE.md](experiments/braintumor/DATASET_LICENSE.md).
 
 ---
 
 ## 🗂️ Estrutura do Projeto
 
-```bash
+```text
 repo/
-│
-├── data/                         # Dados clínicos (imagens, vídeos, metadados)
-│   ├── raw/                      # Dados brutos (DICOM, vídeos originais)
-│   ├── processed/                # Dados pré-processados
-│   └── external/                 # Bases de dados (ex: MIMIC, datasets acadêmicos e/ou dados obtidos via parceiros)
-│
-├── cohorts/                     # Definição computacional das populações de estudo
-│   ├── imaging/                 # Cohorts para exames de imagem
-│   │   ├── chest_xray.yaml
-│   │   └── brain_mri.yaml
-│   │
-│   └── video/                   # Cohorts para vídeos cirúrgicos/endoscopia
-│       ├── laparoscopy.yaml
-│       └── endoscopy.yaml
-│
-├── src/                        # Núcleo de IA reutilizável
-│   ├── data/                   # loaders (DICOM, vídeo, etc.)
-│   ├── preprocessing/          # normalização, frames, slices
-│   ├── features/               # features clínicas e visuais
-│   ├── models/                 # arquiteturas de IA
-│   ├── training/               # loops de treino
-│   ├── evaluation/             # métricas (AUC, Dice, etc.)
-│   └── inference/              # uso do modelo (pipeline clínico)
-│
-├── studies/                    # Estudos científicos (padrão NIH / paper-oriented)
-│   ├── study_001_example/
-│   │   ├── cohort.yaml         # qual população foi usada
-│   │   ├── config.yaml         # hiperparâmetros do estudo
-│   │   ├── run.py              # execução do estudo
-│   │   ├── metrics.json        # resultados quantitativos
-│   │   ├── outputs.csv         # predições
-│   │   └── interpretation.md   # análise clínica dos resultados
-│   │
-│   └── study_002_example/
-│
-├── registry/                   # Rastreamento e reprodutibilidade
-│   ├── models/                 # versões de modelos treinados
-│   ├── datasets/               # versões de cohorts/datasets
-│   └── runs/                   # logs de execuções de estudos
-│
-├── results/                   # Resultados consolidados
-│   ├── figures/               # gráficos e visualizações
-│   ├── tables/                # tabelas estatísticas
-│   └── reports/               # relatórios científicos
-│
-├── notebooks/                  # Exploração e análise (não produtivo)
-│
-├── scripts/                    # Automação de pipelines
-│   ├── train.py
-│   ├── evaluate.py
-│   └── build_cohort.py
-│
-├── configs/                    # Configurações globais (YAML)
-│   ├── config.yaml
-│   ├── model.yaml
-│   └── train.yaml
-│
-├── tests/                     # Testes de integridade do pipeline
-│
-├── .github/
-│   └── workflows/              # CI (validação e reprodutibilidade)
-│       └── ci.yml
-│
+├── data/                         # Dados locais; não presumir que sejam publicáveis
+├── cohorts/                      # Definições computacionais de populações de estudo
+├── src/                           # Núcleo reutilizável de IA
+├── studies/                       # Estudos e métricas agregadas
+├── registry/                      # Rastreabilidade e reprodutibilidade
+├── results/                       # Resultados consolidados
+├── notebooks/                     # Exploração e análise
+├── scripts/                       # Automação de pipelines
+├── configs/                       # Configurações globais
+├── tests/                         # Testes de integridade
+├── .github/workflows/             # CI e deploy
 ├── requirements.txt
 ├── README.md
 └── LICENSE
@@ -143,18 +80,15 @@ repo/
 
 ```bash
 pip install -r requirements.txt
-python src/training/train.py --config src/experiments/exp_baseline.yaml
 ```
+
+Consulte as instruções específicas de cada experimento para executar seus pipelines.
 
 ---
 
 ## 🔁 Reprodutibilidade
 
-Todos os experimentos são controlados por arquivos `.yaml`:
-
-```
-src/experiments/
-```
+Os experimentos devem registrar configurações, versões de dados, métricas e limitações metodológicas. Dados clínicos privados, identificáveis ou sem autorização explícita não devem ser enviados ao repositório.
 
 ---
 
@@ -172,69 +106,19 @@ src/experiments/
 
 ---
 
-## 📊 Contribuições Esperadas
+## 📜 Licença e direitos de terceiros
 
-- Framework modular para experimentos em Deep Learning
-- Benchmark de técnicas TinyML em imagens médicas
-- Estudo comparativo de Domain Adaptation
-- Insights para aplicações em cenários reais
+O código-fonte e a documentação autoral deste repositório são disponibilizados sob a licença MIT, conforme o arquivo [LICENSE](LICENSE), salvo indicação específica em contrário.
 
----
+**Datasets, imagens médicas, artigos, marcas, logotipos e outros materiais de terceiros não são relicenciados pela MIT.** Cada item permanece sujeito aos direitos e termos definidos por seus respectivos titulares e fontes. A presença de um arquivo neste repositório não constitui declaração de que ele pode ser redistribuído.
 
-## 🎓 Afiliação Institucional
-
-PPGIA — Programa de Pós-Graduação em Informática  
-Doutorado em Ciência da Computação  
-Pontifícia Universidade Católica do Paraná (PUCPR)
+Antes de publicar figuras derivadas de dados de terceiros, verifique a licença aplicável, a atribuição exigida, as restrições de uso e a ausência de informações identificáveis.
 
 ---
-
-## 👨‍🏫 Orientadores
-
-- Dr. André Gustavo Hochuli  
-- Dr. Alceu de Souza Britto Jr.  
-
----
-
-## 👨‍🎓 Pesquisador
-
-### MSc. Gabriel Passos de Jesus
-Doutorando em Ciência da Computação (PPGIA/PUCPR)
-
-## 💡 Áreas de Interesse
-
-- Deep Learning  
-- TinyML  
-- Domain Adaptation  
-- Informática Médica  
 
 ## 🔗 Links
 
-- LinkedIn: https://linkedin.com/in/passosgabriel  
-- Lattes: http://lattes.cnpq.br/9928924222649468  
-- ORCID: https://orcid.org/0000-0001-5813-7462  
-- GitHub: https://github.com/iamdatagabs  
-
----
-
-## 📜 Licença
-
-Este projeto está sob a licença MIT.
-
----
-
-## 🤝 Agradecimentos
-
-- Pontifícia Universidade Católica do Paraná (PUCPR)  
-- Programa de Pós-Graduação em Informática (PPGIA)  
-- Comunidade Kaggle  
-- Associação Codaqui, DevParaná e Comunidade Campos Tech  
-
-❤️ Dany (best gf ever, I'm waitin' for 2028)  
-❤️ Maria D'Ajuda, Rubens e Rafael (thx 4 being my family)
-
----
-
-## ⭐ Se este projeto te ajudar...
-
-Considere dar uma ⭐ no repositório!
+- LinkedIn: https://linkedin.com/in/passosgabriel
+- Lattes: http://lattes.cnpq.br/9928924222649468
+- ORCID: https://orcid.org/0000-0001-5813-7462
+- GitHub: https://github.com/iamdatagabs
