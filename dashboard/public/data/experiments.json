@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-11-20T00:00:00Z",
+  "repository": "iamdatagabs/neuralrepo",
+  "total_experiments": 2,
+  "experiments": [
+    {"id":"experiments__braintumor__cnn-baseline","name":"Brain tumor MRI · CNN Baseline","path":"experiments/braintumor/results/model_comparison.csv","status":"recorded","dataset":"Brain tumor MRI","model":"CNN Baseline","task":"Binary image classification","date":"","metrics":{"accuracy":0.6154,"precision":0.5833,"recall":0.8077,"f1_score":0.6774,"roc_auc":0.6243},"outputs":0,"files":["model_comparison.csv"],"source":"CSV benchmark"},
+    {"id":"experiments__braintumor__efficientnetb3","name":"Brain tumor MRI · EfficientNetB3 (TL)","path":"experiments/braintumor/results/model_comparison.csv","status":"recorded","dataset":"Brain tumor MRI","model":"EfficientNetB3 (TL)","task":"Binary image classification","date":"","metrics":{"accuracy":0.8846,"precision":0.8571,"recall":0.9231,"f1_score":0.8889,"roc_auc":0.9556},"outputs":0,"files":["model_comparison.csv"],"source":"CSV benchmark"}
+  ],
+  "metrics_available": ["accuracy","f1_score","precision","recall","roc_auc"],
+  "warnings": [
+    "O benchmark Brain Tumor MRI possui resultados registrados, mas o README do experimento alerta para dataset limitado e ausência de validação externa.",
+    "O model_registry.yaml descreve um modelo multimodal em staging; validação clínica, avaliação de viés e aprovação para uso clínico estão marcadas como pendentes.",
+    "Domain adaptation e TinyML aparecem como linhas de pesquisa/documentação, mas não há métricas tabulares exportáveis identificadas para essas trilhas."
+  ]
+}
