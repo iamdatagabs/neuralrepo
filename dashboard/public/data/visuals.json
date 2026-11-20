@@ -1,5 +1,56 @@
 {
   "schema_version": 1,
-  "generated_at": null,
-  "assets": []
+  "generated_at": "2026-11-20",
+  "assets": [
+    {
+      "id": "brain-mri-eda-samples",
+      "title": "Brain MRI — amostras NORMAL e TUMOR",
+      "description": "Grade exploratória com cinco exemplos de cada classe do conjunto Brain MRI. As imagens são exemplos do dataset, não exames de pacientes deste dashboard.",
+      "path": "https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/eda_samples.png",
+      "category": "medical-imaging",
+      "image_origin": "public_dataset",
+      "dataset": "Brain MRI Images for Brain Tumor Detection",
+      "license": "Redistribuição autorizada pelo responsável do projeto; permissão declarada em 20 nov. 2026. Não equivale a licença MIT do dataset.",
+      "modality": "MRI",
+      "organ": "Brain",
+      "experiment": "Brain Tumor MRI classification",
+      "source_url": "https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection",
+      "approved_for_publication": true,
+      "disclaimer": "Uso educacional e de pesquisa. Rótulos e exemplos refletem o dataset; não constituem diagnóstico, recomendação clínica ou validação de desempenho."
+    },
+    {
+      "id": "brain-mri-gradcam",
+      "title": "Grad-CAM — regiões de ativação",
+      "description": "Visualização exploratória com imagens originais, mapas de calor e sobreposições para exemplos do experimento EfficientNetB3.",
+      "path": "https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/gradcam_visualization.png",
+      "category": "explainability",
+      "image_origin": "derived_result",
+      "dataset": "Brain MRI Images for Brain Tumor Detection",
+      "license": "Redistribuição autorizada pelo responsável do projeto; permissão declarada em 20 nov. 2026. Não equivale a licença MIT do dataset.",
+      "modality": "MRI",
+      "organ": "Brain",
+      "experiment": "Brain Tumor MRI classification",
+      "method": "Grad-CAM",
+      "source_url": "https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection",
+      "approved_for_publication": true,
+      "disclaimer": "Grad-CAM é uma visualização exploratória de ativações associadas à saída do modelo. Não prova explicabilidade fiel, causalidade, validade clínica ou raciocínio médico."
+    },
+    {
+      "id": "brain-mri-augmentation-preview",
+      "title": "Brain MRI — data augmentation",
+      "description": "Exemplos de imagens de ressonância antes e depois de transformações de aumento de dados.",
+      "path": "https://raw.githubusercontent.com/iamdatagabs/neuralrepo/main/experiments/braintumor/results/augmentation_preview.png",
+      "category": "medical-imaging",
+      "image_origin": "derived_result",
+      "dataset": "Brain MRI Images for Brain Tumor Detection",
+      "license": "Redistribuição autorizada pelo responsável do projeto; permissão declarada em 20 nov. 2026. Não equivale a licença MIT do dataset.",
+      "modality": "MRI",
+      "organ": "Brain",
+      "experiment": "Brain Tumor MRI classification",
+      "method": "Data augmentation",
+      "source_url": "https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection",
+      "approved_for_publication": true,
+      "disclaimer": "Transformações para demonstração metodológica. Não representam novos exames independentes nem aumentam a diversidade clínica do conjunto."
+    }
+  ]
 }
