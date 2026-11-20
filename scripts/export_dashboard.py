@@ -22,7 +22,8 @@ ALIASES = {
 METRIC_KEYS = {"accuracy","precision","recall","f1_score","roc_auc","loss","dice","iou","sensitivity","specificity","balanced_accuracy"}
 
 def norm_key(value: str) -> str:
-    raw = value.strip().lower().replace(" ", "_")
+    raw = unicodedata.normalize("NFKD", value.strip().lower()).encode("ascii", "ignore").decode("ascii")
+    raw = raw.replace(" ", "_")
     return ALIASES.get(raw, re.sub(r"[^a-z0-9_]+", "_", raw).strip("_"))
 
 def read_json(path: Path) -> dict[str, Any]:
