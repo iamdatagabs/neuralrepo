@@ -8,27 +8,22 @@
 - Identificador Kaggle: `navoneel/brain-mri-images-for-brain-tumor-detection`
 - Autor/conta indicada na página: Navoneel Chakrabarty.
 
-## Conclusão conservadora
+## Autorização de redistribuição dos ativos publicados
 
-A documentação deste repositório não contém uma cópia verificável dos termos de licença do dataset, e não foi possível confirmar uma licença aberta explícita que autorize a redistribuição das imagens. Atribuição de autoria ou disponibilidade para download não equivalem a permissão para republicar.
+Em 20 de novembro de 2026, o responsável pelo projeto confirmou nesta conversa que possui autorização para redistribuir publicamente, inclusive no GitHub Pages, as imagens originais e as visualizações derivadas aqui selecionadas (`eda_samples.png`, `gradcam_visualization.png` e `augmentation_preview.png`).
 
-Até que os termos sejam confirmados diretamente na página de origem ou com os titulares dos direitos, este projeto não presume autorização para redistribuir imagens originais ou derivadas que reproduzam conteúdo do conjunto.
+O registro documenta a declaração recebida e o escopo informado pelo responsável do projeto. A autorização não é apresentada como licença geral do dataset, não altera os termos de terceiros e não concede automaticamente direitos sobre outros arquivos, imagens ou usos que não estejam cobertos pela autorização recebida.
 
 ## Escopo da licença MIT
 
-A licença MIT no arquivo [LICENSE](../../LICENSE) aplica-se ao código-fonte e à documentação autoral disponibilizados neste repositório, salvo avisos específicos. Ela não relicencia materiais de terceiros, incluindo:
-
-- imagens originais do dataset;
-- imagens pré-processadas, aumentadas ou recortadas derivadas do dataset;
-- figuras que incorporem imagens do conjunto;
-- marcas, logotipos e outros materiais externos.
+A licença MIT no arquivo [LICENSE](../../LICENSE) aplica-se ao código-fonte e à documentação autoral disponibilizados neste repositório, salvo avisos específicos. Ela não relicencia materiais de terceiros. Os ativos do dataset são publicados com base na autorização específica descrita acima, não sob a licença MIT.
 
 ## Política de uso e publicação
 
-1. Obter os dados diretamente da fonte e observar os termos vigentes no momento do acesso.
-2. Não republicar imagens originais ou derivadas que reproduzam conteúdo do dataset enquanto a permissão de redistribuição não estiver confirmada.
-3. Não atribuir MIT, CC BY, CC BY-NC-SA ou outra licença ao dataset sem evidência direta e verificável.
-4. Antes de publicar figuras no dashboard, verificar licença, atribuição, origem, conteúdo visual e ausência de metadados identificáveis.
-5. Se a licença ou autorização for confirmada posteriormente, atualizar este documento com o texto/identificador exato da licença, URL, data da consulta e condições de atribuição.
+1. Manter a atribuição e a referência à fonte do dataset.
+2. Restringir a publicação aos ativos e usos cobertos pela autorização confirmada.
+3. Não apresentar Grad-CAM como prova de raciocínio clínico, causalidade ou validade clínica.
+4. Verificar arquivos originais e metadados antes de incluir novos ativos, especialmente DICOM/EXIF ou qualquer informação identificável.
+5. Registrar separadamente futuras permissões, licenças ou limitações adicionais.
 
-**Esta nota é uma medida documental preventiva, não um parecer jurídico.**
+**Esta nota é um registro de proveniência e autorização informado pelo responsável do projeto, não um parecer jurídico.**
