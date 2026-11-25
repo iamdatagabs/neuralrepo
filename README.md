@@ -106,6 +106,21 @@ Os experimentos devem registrar configurações, versões de dados, métricas e 
 
 ---
 
+## 🔎 Experimentos e interfaces exploratórias
+
+Além dos notebooks e pipelines de treinamento, o repositório reúne uma interface experimental para explorar regiões de interesse em imagens de ressonância magnética cerebral e comparar visualmente exemplos rotulados como **NORMAL** e **TUMOR**.
+
+Essa interface tem finalidade de inspeção e demonstração computacional. A visualização não constitui laudo, classificação clínica validada ou ferramenta de apoio diagnóstico. A interpretação permanece dependente da origem, qualidade, anotação e licença dos dados utilizados.
+
+### Escopo e maturidade
+
+- O foco do repositório é pesquisa experimental em representação, generalização e eficiência de modelos.
+- Experimentos com diferentes bases não devem ser interpretados como validação externa entre hospitais ou populações sem desenho e avaliação específicos.
+- Métricas devem ser acompanhadas de protocolo de divisão de dados, prevenção de vazamento, calibração quando pertinente e análise de erros.
+- Não utilizar dados pessoais ou imagens identificáveis de pacientes sem base legal, autorização e salvaguardas apropriadas.
+
+---
+
 ## 📜 Licença e direitos de terceiros
 
 O código-fonte e a documentação autoral deste repositório são disponibilizados sob a licença MIT, conforme o arquivo [LICENSE](LICENSE), salvo indicação específica em contrário.
