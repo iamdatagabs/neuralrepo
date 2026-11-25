@@ -108,7 +108,7 @@ Os experimentos devem registrar configurações, versões de dados, métricas e 
 
 ## 🔎 Experimentos e interfaces exploratórias
 
-Além dos notebooks e pipelines de treinamento, o repositório reúne uma interface experimental para explorar regiões de interesse em imagens de ressonância magnética cerebral e comparar visualmente exemplos rotulados como **NORMAL** e **TUMOR**.
+Além dos notebooks e pipelines de treinamento, o dashboard reúne ferramentas experimentais para explorar regiões de interesse em imagens de ressonância magnética cerebral e comparar visualmente exemplos rotulados como **NORMAL** e **TUMOR**. Os componentes estão em [`MRIExplorer.tsx`](dashboard/src/features/imaging/MRIExplorer.tsx) e [`VisualExplorer.tsx`](dashboard/src/features/imaging/VisualExplorer.tsx).
 
 Essa interface tem finalidade de inspeção e demonstração computacional. A visualização não constitui laudo, classificação clínica validada ou ferramenta de apoio diagnóstico. A interpretação permanece dependente da origem, qualidade, anotação e licença dos dados utilizados.
 
@@ -117,7 +117,7 @@ Essa interface tem finalidade de inspeção e demonstração computacional. A vi
 - O foco do repositório é pesquisa experimental em representação, generalização e eficiência de modelos.
 - Experimentos com diferentes bases não devem ser interpretados como validação externa entre hospitais ou populações sem desenho e avaliação específicos.
 - Métricas devem ser acompanhadas de protocolo de divisão de dados, prevenção de vazamento, calibração quando pertinente e análise de erros.
-- Não utilizar dados pessoais ou imagens identificáveis de pacientes sem base legal, autorização e salvaguardas apropriadas.
+- Não utilizar dados pessoais ou imagens identificáveis de pacientes sem base legal, autorização e salvaguardas apropriadas. O repositório também documenta governança de dados e modelos em [`governance/data`](governance/data/), [`governance/models`](governance/models/) e [`governance/audit`](governance/audit/).
 
 ---
 
