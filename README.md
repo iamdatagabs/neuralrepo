@@ -1,5 +1,5 @@
 # 🧠 neuralrepo
-### Experimentos em Redes Neurais • TinyML • Domain Adaptation
+### Medical Imaging · Generalization · TinyML · Domain Adaptation
 
 <p align="center">
   <img src="assets/logo-pucpr-vermelha.png" width="200"/>
@@ -15,12 +15,12 @@
 </p>
 
 <p align="center">
-  🚀 Repositório de pesquisa em Deep Learning aplicado a imagens médicas
+  Pesquisa em Deep Learning para imagens médicas heterogêneas, com foco em generalização e eficiência computacional
 </p>
 
 ---
 
-## ✨ Sobre o Projeto
+**Portfólio:** [Gabriel Passos — Engineering Portfolio](https://iamdatagabs.github.io/iamdatagabs/portfolio/) · **Código:** [GitHub](https://github.com/iamdatagabs/neuralrepo)\n\n## ✨ Sobre o Projeto
 
 Este repositório reúne experimentos em aprendizado profundo, com foco em:
 
